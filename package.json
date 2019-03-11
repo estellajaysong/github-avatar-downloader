@@ -1,0 +1,23 @@
+{
+  "name": "github-avatar-downloader",
+  "version": "1.0.0",
+  "description": "Downloads contributor profile images from a repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estellajaysong/github-avatar-downloader.git"
+  },
+  "author": "Estella Song",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estellajaysong/github-avatar-downloader/issues"
+  },
+  "homepage": "https://github.com/estellajaysong/github-avatar-downloader#readme",
+  "keywords": [],
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
