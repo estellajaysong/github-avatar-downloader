@@ -21,6 +21,9 @@ function getRepoContributors(repoOwner, repoName, cb) {
 };
 
 getRepoContributors(process.argv[2], process.argv[3], function (err, result, body) {
+  if (!process.argv[2] || !process.argv[3]) {
+    throw "Please input the owner and name of the repository.";
+  }
   var body = JSON.parse(body);
 
   body.forEach(function (element) {
