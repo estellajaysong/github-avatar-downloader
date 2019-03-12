@@ -13,7 +13,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
       'User-Agent': 'request',
       'Authorization': 'token ' + secrets.GITHUB_TOKEN
     }
-  }
+  };
 
   request(options, function (err, res, body) {
     cb(err, res, body);
@@ -36,9 +36,9 @@ getRepoContributors(process.argv[2], process.argv[3], function (err, result, bod
 function downloadImageByURL(url, filePath) {
   fs.mkdir('avatars', function (err) {
     request.get(url)
-      .on('error', function (err) {                                   // Note 2
+      .on('error', function (err) {
         throw err;
       })
-      .pipe(fs.createWriteStream(filePath));               // Note 4
+      .pipe(fs.createWriteStream(filePath));
   });
 };
